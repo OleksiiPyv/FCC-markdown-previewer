@@ -34,10 +34,6 @@
 
         &.zoomed {
             height: 100vh;
-
-            #editor {
-                height: 80vh;
-            }
         }
     }
 
@@ -47,6 +43,12 @@
 
         @media screen and (min-width: 788px) {
             max-width: 50%;
+        }
+
+        &.zoomed {
+            #editor {
+                height: 80vh;
+            }
         }
 
         #editor {
@@ -63,7 +65,6 @@
     }
 
     .previewer {
-
         @media screen and (min-width: 788px) {
             max-width: 50%;
         }
