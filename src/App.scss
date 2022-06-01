@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+.App {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(10deg, #dda68f41 1%, white 80%);
+
+    .toolbar {
+        z-index: 10;
+    }
+
+    &.zoomed {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .editor,
+    .previewer {
+        padding: 15px;
+        box-shadow: 0px 0px 10px;
+        background: rgba(255, 255, 255, 0.5);
+
+        &.hidden {
+            display: none;
+        }
+
+        &.zoomed {
+            max-height: 80vh;
+        }
+    }
+
+    .editor {
+        width: 100%;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 788px) {
+            max-width: 50%;
+        }
+
+        #editor {
+            width: 100%;
+            height: 50vh;
+            resize: none;
+            border: none;
+            margin-top: 1rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .previewer {
+
+        @media screen and (min-width: 788px) {
+            max-width: 50%;
+        }
+
+        &.zoomed {
+            overflow-y: scroll;
+            i {
+                position: fixed;
+            }
+        }
+    }
+
+    i {
+        cursor: pointer;
+    }
+}
