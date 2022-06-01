@@ -33,7 +33,11 @@
         }
 
         &.zoomed {
-            max-height: 80vh;
+            height: 100vh;
+
+            #editor {
+                height: 80vh;
+            }
         }
     }
 
